@@ -26,7 +26,7 @@ entity CFXS_HWD_TestDev is
         -- Mirrored pins for logic analyzer
         dbg_target_nreset : out std_logic;
         dbg_target_swclk  : out std_logic;
-        dbg_target_swdio  : inout std_logic;
+        dbg_target_swdio  : out std_logic;
         dbg_target_swo    : out std_logic
     );
 end entity;
