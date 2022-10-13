@@ -42,6 +42,7 @@ set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS OFF
 
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Utils.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Types.vhd" -library CFXS
 set_global_assignment -name FAMILY "Cyclone V"

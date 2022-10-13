@@ -2,6 +2,8 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 library CFXS;
+use CFXS.Utils.RequiredBits;
+use CFXS.Utils.MillisecondsToCycles;
 
 -------------------------------
 -- [SWD Pins]
@@ -32,44 +34,89 @@ entity CFXS_HWD_TestDev is
 end entity;
 
 architecture RTL of CFXS_HWD_TestDev is
-    constant CLOCK_FREQUENCY       : natural := 50_000_000;                          -- 50MHz
-    constant SWCLK_DEFAULT_DIVIDER : natural := CLOCK_FREQUENCY / 2 / 1_000_000 - 1; -- Target SWCLK frequency 1MHz
+    constant CLOCK_FREQUENCY       : natural := 50_000_000; -- 50MHz
+    constant SLOW_CLOCK_FREQUENCY  : natural := 50_000_000 / 128;
+    constant SWCLK_FREQUENCY       : natural := 500_000;                                   -- SWCLK frequency
+    constant SWCLK_DEFAULT_DIVIDER : natural := CLOCK_FREQUENCY / 2 / SWCLK_FREQUENCY - 1; -- Divider for SWCLK
 
     signal reg_ButtonState : std_logic_vector(i_button'length - 1 downto 0) := (others => '0');
 
     -- SWD/SWO registers
-    signal reg_SWCLK_Divider : unsigned(CFXS.Utils.RequiredBits(SWCLK_DEFAULT_DIVIDER) - 1 downto 0) := to_unsigned(SWCLK_DEFAULT_DIVIDER, CFXS.Utils.RequiredBits(SWCLK_DEFAULT_DIVIDER));
-    signal reg_target_swclk  : std_logic;
+    signal reg_SWCLK_Divider        : unsigned(RequiredBits(SWCLK_DEFAULT_DIVIDER) - 1 downto 0) := to_unsigned(SWCLK_DEFAULT_DIVIDER, RequiredBits(SWCLK_DEFAULT_DIVIDER));
+    signal reg_target_swclk         : std_logic;
+    signal reg_SWD_RequestLineReset : std_logic := '0';
+
+    -- Target reset
+    signal reg_Target_NRESET : std_logic;
+
+    -- Slow clock
+    signal reg_SlowClockCounter : unsigned(6 downto 0) := (others => '0');
+    signal slow_clock           : std_logic            := '0';
 begin
+    process (system_clock)
+    begin
+        if rising_edge(system_clock) then
+            reg_SlowClockCounter <= reg_SlowClockCounter + 1;
+            slow_clock           <= reg_SlowClockCounter(6);
+        end if;
+    end process;
+
     instance_ButtonDebouncer : entity CFXS.FixedDebounce
         generic map(
-            STABLE_CYCLES => CFXS.Utils.MillisecondsToCycles(10, CLOCK_FREQUENCY),
+            STABLE_CYCLES => CFXS.Utils.MillisecondsToCycles(10, SLOW_CLOCK_FREQUENCY),
             N             => i_button'length
         )
         port map(
-            clock  => system_clock,
+            clock  => slow_clock,
             input  => not i_button,
             output => reg_ButtonState
         );
 
     o_led(7 downto 6) <= reg_ButtonState;
 
+    instance_TestPulse : entity CFXS.PulseGenerator
+        generic map(
+            IDLE_OUTPUT  => '0',
+            PULSE_LENGTH => SLOW_CLOCK_FREQUENCY / SWCLK_FREQUENCY + 1
+        )
+        port map(
+            clock   => slow_clock,
+            trigger => reg_ButtonState(0),
+            output  => reg_SWD_RequestLineReset
+        );
+
+    ----------------------------------------------------
+    -- Reset signal
+    instance_ResetPulseGenerator : entity CFXS.PulseGenerator
+        generic map(
+            IDLE_OUTPUT  => '1',
+            PULSE_LENGTH => MillisecondsToCycles(20, SLOW_CLOCK_FREQUENCY)
+        )
+        port map(
+            clock   => slow_clock,
+            trigger => reg_ButtonState(1),
+            output  => reg_Target_NRESET
+        );
+
+    target_nreset     <= reg_Target_NRESET;
+    dbg_target_nreset <= reg_Target_NRESET;
+    o_led(1)          <= not reg_Target_NRESET;
+
     ----------------------------------------------------
     -- SWD/SWO
     instance_SWD_Interface : entity CFXS.Interface_SWD
         generic map(
-            SWCLK_DIV_WIDTH  => CFXS.Utils.RequiredBits(SWCLK_DEFAULT_DIVIDER),
+            SWCLK_DIV_WIDTH  => RequiredBits(SWCLK_DEFAULT_DIVIDER),
             USE_SWDIO_MIRROR => true
         )
         port map(
-            clock                      => system_clock,
-            cfg_SWCLK_Divider          => reg_SWCLK_Divider,
-            target_swclk               => reg_target_swclk,
-            target_swdio               => target_swdio,
-            mirror_target_swdio        => dbg_target_swdio,
-            request_SendLineReset      => not i_button(0),
-            request_SendSwitchSequence => not i_button(1),
-            status_Busy                => o_led(0)
+            clock                 => system_clock,
+            cfg_SWCLK_Divider     => reg_SWCLK_Divider,
+            target_swclk          => reg_target_swclk,
+            target_swdio          => target_swdio,
+            mirror_target_swdio   => dbg_target_swdio,
+            request_SendLineReset => reg_SWD_RequestLineReset,
+            status_Busy           => o_led(0)
         );
 
     -- Multiple outputs for SWCLK

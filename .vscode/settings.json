@@ -1,4 +1,5 @@
 {
+    "QUARTUS_PATH": "C:/intelFPGA_lite/20.1/quartus/bin64",
     "vhdl.formatter.align.all": true,
     "vhdl.formatter.case.keyword": "LowerCase",
     "vhdl.formatter.case.typename": "LowerCase",

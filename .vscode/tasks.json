@@ -31,6 +31,57 @@
                 "${workspaceRoot}/CFXS_HWD_Debug_Probe/cfg/LinkerScript.ld",
             ],
             "group": "test"
+        },
+        {
+            "label": "Quartus Compile",
+            "type": "shell",
+            "command": "${config:QUARTUS_PATH}/quartus_sh --flow compile CFXS_HWD_TestDev",
+            "options": {
+                "cwd": "${workspaceRoot}/Dev/Quartus"
+            },
+            "group": "test",
+            "problemMatcher": {
+                "owner": "VHDL",
+                "source": "Quartus",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(Error) \\((\\d+)\\):.+\\):? (.+)File: (.+) Line: (\\d+)",
+                    "file": 4,
+                    "line": 5,
+                    "severity": 1,
+                    "message": 3,
+                },
+            }
+        },
+        {
+            "label": "Quartus Program",
+            "type": "shell",
+            "command": "${config:QUARTUS_PATH}/quartus_pgm -m jtag -o \\\"p;CFXS_HWD_TestDev.sof@2\\\"",
+            "options": {
+                "cwd": "${workspaceRoot}/Dev/Quartus/output_files"
+            },
+            "group": "test",
+        },
+        {
+            "label": "Quartus Compile + Program",
+            "type": "shell",
+            "dependsOn": [
+                "Quartus Compile",
+                "Quartus Program"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": {
+                "owner": "VHDL",
+                "source": "Quartus",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(Error) \\((\\d+)\\):.+\\):? (.+)File: (.+) Line: (\\d+)",
+                    "file": 4,
+                    "line": 5,
+                    "severity": 1,
+                    "message": 3,
+                },
+            }
         }
     ]
 }

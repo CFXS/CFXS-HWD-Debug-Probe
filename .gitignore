@@ -1,1 +1,6 @@
 /build
+Dev/Quartus/db
+Dev/Quartus/incremental_db
+Dev/Quartus/output_files
+Dev/Quartus/simulation
+Dev/Quartus/c5_pin_model_dump.txt

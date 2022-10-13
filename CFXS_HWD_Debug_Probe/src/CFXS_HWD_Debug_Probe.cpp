@@ -223,8 +223,8 @@ void InitializeApp() {
     SWD_Read<LLDS::ADI::Command::DP::READ_CTRL_STAT>(&ctrlStat);
     SWD_Write<LLDS::ADI::Command::DP::WRITE_ABORT>(0b11110); // Clear errors
 
-    auto writeCtrlStat = SWD_Write<LLDS::ADI::Command::DP::WRITE_CTRL_STAT>((1 << 28) | (1 << 30));
-    LLDS::ProtocolStatus selectStat;
+    auto writeCtrlStat              = SWD_Write<LLDS::ADI::Command::DP::WRITE_CTRL_STAT>((1 << 28) | (1 << 30));
+    LLDS::ProtocolStatus selectStat = LLDS::ProtocolStatus::OK;
 
     if (writeCtrlStat == LLDS::ProtocolStatus::OK) {
         uint32_t statx = 0;
@@ -239,7 +239,7 @@ void InitializeApp() {
         uint32_t memval = 0;
         while (SWD_Read<LLDS::ADI::Command::AP::READ_DRW>(&memval) == LLDS::ProtocolStatus::WAIT) {
         }
-        CFXS_printf("memval: %x\n", memval);
+        CFXS_printf("memval: %lx\n", memval);
 
         SWD_Write<LLDS::ADI::Command::AP::WRITE_CSW>(0x23000012);
         SWD_Write<LLDS::ADI::Command::AP::WRITE_TAR>(0x20000000);
@@ -249,7 +249,7 @@ void InitializeApp() {
         SWD_Write<LLDS::ADI::Command::AP::WRITE_TAR>(0x20000000);
         while (SWD_Read<LLDS::ADI::Command::AP::READ_DRW>(&memval) == LLDS::ProtocolStatus::WAIT) {
         }
-        CFXS_printf("memval: %x\n", memval);
+        CFXS_printf("memval: %lx\n", memval);
     }
 
     CFXS::CPU::BlockingMicroseconds(100);
@@ -265,7 +265,7 @@ void InitializeApp() {
         CFXS_printf("Read IDCODE failed: %s", ToString(stat));
     }
 
-    CFXS_printf("Read  CTRL_STAT: %X\n", ctrlStat);
+    CFXS_printf("Read  CTRL_STAT: %lX\n", ctrlStat);
     CFXS_printf("Write CTRL_STAT: %s\n", ToString(writeCtrlStat));
     CFXS_printf("Write SELECT:    %s\n", ToString(selectStat));
 
