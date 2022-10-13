@@ -1,0 +1,19 @@
+[submodule "CMake"]
+	path = CMake
+	url = https://github.com/CFXS/CFXS-CMake-Bare-Metal-Toolchain.git
+
+[submodule "CFXS_Base"]
+	path = build/_deps/lib_cfxs_base-src
+	url = fake_url
+
+[submodule "CFXS_HW"]
+	path = build/_deps/lib_cfxs_hardware-src
+	url = fake_url
+
+[submodule "CFXS_Platform"]
+	path = build/_deps/lib_cfxs_platform-src
+	url = fake_url
+
+[submodule "CFXS_LLDS"]
+	path = build/_deps/lib_cfxs_llds-src
+	url = fake_url

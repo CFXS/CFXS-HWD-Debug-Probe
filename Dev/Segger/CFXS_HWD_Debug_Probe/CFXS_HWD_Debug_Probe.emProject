@@ -1,0 +1,31 @@
+<!DOCTYPE CrossStudio_Project_File>
+<solution Name="CFXS_HWD_Debug_Probe" target="8" version="2">
+  <project Name="CFXS_HWD_Debug_Probe">
+    <configuration
+      Name="Common"
+      arm_architecture="v7EM"
+      arm_core_type="Cortex-M4"
+      arm_endian="Little"
+      arm_fpu_type="FPv4-SP-D16"
+      arm_simulator_memory_simulation_parameter="RX 00000000,00100000,FFFFFFFF;RWX 20000000,00040000,CDCDCDCD"
+      arm_target_device_name="TM4C1294NCPDT"
+      arm_target_interface_type="SWD"
+      debug_start_from_entry_point_symbol="No"
+      debug_target_connection="J-Link"
+      external_build_file_name="X:/CFXS/CFXS-HWD-Debug-Probe/build/CFXS_HWD_Debug_Probe/CFXS_HWD_Debug_Probe.elf"
+      linker_section_placements_segments="FLASH1 RX 0x00000000 0x00100000;RAM1 RWX 0x20000000 0x00040000"
+      project_directory=""
+      project_type="Externally Built Executable" />
+    <configuration
+      Name="Debug"
+      debug_entry_point_symbol=""
+      debug_initial_breakpoint="__cfxs_startup"
+      debug_start_from_entry_point_symbol="Yes"
+      debug_startup_completion_point="__cfxs_startup" />
+  </project>
+  <configuration
+    Name="Debug"
+    c_preprocessor_definitions="DEBUG"
+    gcc_debugging_level="Level 3"
+    gcc_optimization_level="None" />
+</solution>
