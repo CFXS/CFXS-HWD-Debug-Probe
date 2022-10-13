@@ -63,7 +63,7 @@ begin
 
     instance_ButtonDebouncer : entity CFXS.FixedDebounce
         generic map(
-            STABLE_CYCLES => CFXS.Utils.MillisecondsToCycles(10, SLOW_CLOCK_FREQUENCY),
+            STABLE_CYCLES => MillisecondsToCycles(10, SLOW_CLOCK_FREQUENCY),
             N             => i_button'length
         )
         port map(
