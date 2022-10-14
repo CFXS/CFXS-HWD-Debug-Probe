@@ -1,0 +1,12 @@
+C:\lscc\iCEcube2.2020.12\synpbase\bin64\c_hdl.exe  -osyn  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_comp.srs  -top  main  -hdllog  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_compiler.srr  -encrypt  -mp  1  -verification_mode 0  -vhdl  -prodtype  synplify_pro  -primux -fixsmult -infer_seqShift -ice -sdff_counter -nram -divnmod -nostructver  -encrypt  -pro  -dmgen  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\dm  -lite -ui -fid2 -ram -sharing on -ll 2000 -autosm  -vhdl2008  -ignore_undefined_lib  -lib work X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd -lib CFXS X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd -lib CFXS X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd -lib CFXS X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd -lib CFXS X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Types.vhd -lib CFXS X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Utils.vhd 
+rc:0 success:1 runtime:2
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_comp.srs|io:o|time:1665770962|size:11775|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_compiler.srr|io:o|time:1665770962|size:5112|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd|io:i|time:1665766696|size:4579|exec:0
+file:X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd|io:i|time:1665694191|size:1667|exec:0
+file:X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd|io:i|time:1665694807|size:2296|exec:0
+file:X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd|io:i|time:1665620582|size:5379|exec:0
+file:X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Types.vhd|io:i|time:1665615756|size:79|exec:0
+file:X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Utils.vhd|io:i|time:1665610678|size:1621|exec:0
+file:C:\lscc\iCEcube2.2020.12\synpbase\bin\c_hdl.exe|io:i|time:1665752317|size:1338368|exec:1
+file:C:\lscc\iCEcube2.2020.12\synpbase\bin64\c_hdl.exe|io:i|time:1665752318|size:1754112|exec:1

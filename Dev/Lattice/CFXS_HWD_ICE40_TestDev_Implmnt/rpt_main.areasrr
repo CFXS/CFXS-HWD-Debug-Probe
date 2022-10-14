@@ -1,0 +1,118 @@
+#### START OF AREA REPORT #####[
+
+Part:			ICE40UP5KUWG30 (Lattice)
+
+--------------------------------------------------------------------
+########   Utilization report for  Top level view:   main   ########
+====================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     67                 100 %                
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main:	67 (25.77 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       114                100 %                
+CARRYS     49                 100 %                
+===================================================
+Total COMBINATIONAL LOGIC in the block main:	163 (62.69 % Utilization)
+
+
+IO PADS
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+PADS     20                 100 %                
+=================================================
+Total IO PADS in the block main:	20 (7.69 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   FixedDebounce   ########
+Instance path:   main.FixedDebounce                                
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     26                 38.8 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.FixedDebounce:	26 (10.00 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       36                 31.6 %               
+CARRYS     22                 44.9 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block main.FixedDebounce:	58 (22.31 % Utilization)
+
+-------------------------------------------------------------------
+########   Utilization report for  cell:   Interface_SWD   ########
+Instance path:   main.Interface_SWD                                
+===================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     17                 25.4 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.Interface_SWD:	17 (6.54 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       39                 34.2 %               
+CARRYS     9                  18.4 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block main.Interface_SWD:	48 (18.46 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   PulseGeneratorZ0   ########
+Instance path:   main.PulseGeneratorZ0                                
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     14                 20.9 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.PulseGeneratorZ0:	14 (5.38 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name       Total elements     Utilization     Notes
+---------------------------------------------------
+LUTS       29                 25.4 %               
+CARRYS     12                 24.5 %               
+===================================================
+Total COMBINATIONAL LOGIC in the block main.PulseGeneratorZ0:	41 (15.77 % Utilization)
+
+----------------------------------------------------------------------
+########   Utilization report for  cell:   PulseGeneratorZ1   ########
+Instance path:   main.PulseGeneratorZ1                                
+======================================================================
+
+SEQUENTIAL ELEMENTS
+Name      Total elements     Utilization     Notes
+--------------------------------------------------
+FLOPS     2                  2.99 %               
+==================================================
+Total SEQUENTIAL ELEMENTS in the block main.PulseGeneratorZ1:	2 (0.77 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name     Total elements     Utilization     Notes
+-------------------------------------------------
+LUTS     2                  1.75 %               
+=================================================
+Total COMBINATIONAL LOGIC in the block main.PulseGeneratorZ1:	2 (0.77 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

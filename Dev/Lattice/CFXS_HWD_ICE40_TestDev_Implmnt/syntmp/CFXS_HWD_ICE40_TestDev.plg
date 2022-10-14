@@ -1,0 +1,12 @@
+@P:  Worst Slack : -1.607
+@P:  main|system_clock - Estimated Frequency : 93.3 MHz
+@P:  main|system_clock - Requested Frequency : 109.8 MHz
+@P:  main|system_clock - Estimated Period : 10.713
+@P:  main|system_clock - Requested Period : 9.106
+@P:  main|system_clock - Slack : -1.607
+@P: main Part : ice40up5kuwg30
+@P: main I/O primitives : 19
+@P: main I/O Register bits : 0
+@P: main Register bits (Non I/O) : 67 (1%)
+@P: main Total Luts : 114 (2%)
+@P:  CPU Time : 0h:00m:00s

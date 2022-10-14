@@ -12,7 +12,7 @@ use CFXS.Utils.MillisecondsToCycles;
 -- blue SWO GPIO_1.4      PIN_AG28 => PIN_AF28
 -- white RESET GPIO_1.6   PIN_AE25 => PIN_AF27
 
-entity CFXS_HWD_TestDev is
+entity main is
     port (
         system_clock : in std_logic;
         i_switch     : in std_logic_vector(3 downto 0);
@@ -33,7 +33,7 @@ entity CFXS_HWD_TestDev is
     );
 end entity;
 
-architecture RTL of CFXS_HWD_TestDev is
+architecture RTL of main is
     constant CLOCK_FREQUENCY       : natural := 50_000_000; -- 50MHz
     constant SLOW_CLOCK_FREQUENCY  : natural := 50_000_000 / 128;
     constant SWCLK_FREQUENCY       : natural := 500_000;                                   -- SWCLK frequency

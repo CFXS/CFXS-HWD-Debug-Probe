@@ -1,0 +1,69 @@
+Synopsys HDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+Synopsys VHDL Compiler, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+Copyright (C) 1994-2016 Synopsys, Inc. All rights reserved. This Synopsys software and all associated documentation are proprietary to Synopsys, Inc. and may only be used pursuant to the terms and conditions of a written license agreement with Synopsys, Inc. All other use, reproduction, modification, or distribution of the Synopsys software or the associated documentation is strictly prohibited.
+
+@N: CD720 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\vhd2008\std.vhd":146:18:146:21|Setting time resolution to ps
+@N:"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":15:7:15:10|Top entity is set to main.
+File X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Types.vhd changed - recompiling
+File X:\CFXS\CFXS-HDL-Library\VHDL\Packages\Utils.vhd changed - recompiling
+File X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd changed - recompiling
+File X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd changed - recompiling
+File X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd changed - recompiling
+File X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd changed - recompiling
+VHDL syntax check successful!
+
+Compiler output is up to date.  No re-compile necessary
+
+@N: CD231 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":15:7:15:10|Synthesizing work.main.rtl.
+@W: CD638 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":45:11:45:27|Signal reg_swclk_divider is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":8:7:8:19|Synthesizing cfxs.interface_swd.rtl.
+@N: CD233 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":60:25:60:26|Using sequential encoding for type datadirection_t.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":47:11:47:27|Signal reg_sendlinereset is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":48:11:48:32|Signal reg_sendswitchsequence is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":61:11:61:19|Signal dir_swdio is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for cfxs.interface_swd.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd":8:7:8:20|Synthesizing cfxs.pulsegenerator.rtl.
+Post processing for cfxs.pulsegenerator.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd":8:7:8:20|Synthesizing cfxs.pulsegenerator.rtl.
+Post processing for cfxs.pulsegenerator.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd":7:7:7:19|Synthesizing cfxs.fixeddebounce.rtl.
+Post processing for cfxs.fixeddebounce.rtl
+Post processing for work.main.rtl
+@N: CL159 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":28:8:28:33|Input request_SendSwitchSequence is unused.
+@W: CL157 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":20:8:20:12|Output o_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@N: CL159 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":18:8:18:15|Input i_switch is unused.
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 71MB peak: 72MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Oct 14 21:09:21 2022
+
+###########################################################]
+Synopsys Netlist Linker, version comp2016q3p1, Build 141R, built Dec  5 2016
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 67MB peak: 68MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Oct 14 21:09:22 2022
+
+###########################################################]
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 3MB peak: 4MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Fri Oct 14 21:09:22 2022
+
+###########################################################]

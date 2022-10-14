@@ -40,14 +40,14 @@ set_global_assignment -name ALLOW_REGISTER_RETIMING OFF
 set_global_assignment -name FLOW_ENABLE_HYPER_RETIMER_FAST_FORWARD OFF
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS OFF
 
-set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" -library CFXS
-set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" -library CFXS
-set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd" -library CFXS
-set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Utils.vhd" -library CFXS
-set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Types.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "../../../CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "../../../CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "../../../CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "../../../CFXS-HDL-Library/VHDL/Packages/Utils.vhd" -library CFXS
+set_global_assignment -name VHDL_FILE "../../../CFXS-HDL-Library/VHDL/Packages/Types.vhd" -library CFXS
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA6U23I7
-set_global_assignment -name TOP_LEVEL_ENTITY CFXS_HWD_TestDev
+set_global_assignment -name TOP_LEVEL_ENTITY main
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 20.1.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "22:23:19  OCTOBER 12, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 Lite Edition"
@@ -65,7 +65,7 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VHDL_FILE src/CFXS_HWD_TestDev.vhd
+set_global_assignment -name VHDL_FILE ../HDL/src/main.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

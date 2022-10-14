@@ -1,0 +1,19 @@
+@N: CD231 :"C:\lscc\iCEcube2.2020.12\synpbase\lib\vhd2008\std1164.vhd":890:16:890:17|Using onehot encoding for type mvl9plus. For example, enumeration 'U' is mapped to "1000000000".
+@N: CD630 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":15:7:15:10|Synthesizing work.main.rtl.
+@W: CD638 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":45:11:45:27|Signal reg_swclk_divider is undriven. Either assign the signal a value or remove the signal declaration.
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":8:7:8:19|Synthesizing cfxs.interface_swd.rtl.
+@N: CD233 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":60:25:60:26|Using sequential encoding for type datadirection_t.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":47:11:47:27|Signal reg_sendlinereset is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":48:11:48:32|Signal reg_sendswitchsequence is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":61:11:61:19|Signal dir_swdio is undriven. Either assign the signal a value or remove the signal declaration.
+Post processing for cfxs.interface_swd.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd":8:7:8:20|Synthesizing cfxs.pulsegenerator.rtl.
+Post processing for cfxs.pulsegenerator.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd":8:7:8:20|Synthesizing cfxs.pulsegenerator.rtl.
+Post processing for cfxs.pulsegenerator.rtl
+@N: CD630 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd":7:7:7:19|Synthesizing cfxs.fixeddebounce.rtl.
+Post processing for cfxs.fixeddebounce.rtl
+Post processing for work.main.rtl
+@N: CL159 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":28:8:28:33|Input request_SendSwitchSequence is unused.
+@W: CL157 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":20:8:20:12|Output o_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
+@N: CL159 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":18:8:18:15|Input i_switch is unused.

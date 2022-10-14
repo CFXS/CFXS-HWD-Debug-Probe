@@ -1,0 +1,11 @@
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_1 (in view: work.main(rtl)) on net o_led[5] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_2 (in view: work.main(rtl)) on net o_led[4] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_3 (in view: work.main(rtl)) on net o_led[3] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_4 (in view: work.main(rtl)) on net o_led[2] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_1 (in view: work.main(rtl)) on net o_led[5] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_2 (in view: work.main(rtl)) on net o_led[4] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_3 (in view: work.main(rtl)) on net o_led[3] (in view: work.main(rtl)) has its enable tied to GND.
+@N: MO111 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":20:8:20:12|Tristate driver o_led_4 (in view: work.main(rtl)) on net o_led[2] (in view: work.main(rtl)) has its enable tied to GND.
+@N: BN225 |Writing default property annotation file X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.sap.
