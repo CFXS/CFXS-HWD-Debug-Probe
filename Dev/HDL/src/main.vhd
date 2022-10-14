@@ -115,7 +115,7 @@ begin
             target_swclk          => reg_target_swclk,
             target_swdio          => target_swdio,
             mirror_target_swdio   => dbg_target_swdio,
-            request_SendLineReset => reg_SWD_RequestLineReset,
+            request_SendLineReset => reg_SWD_RequestLineReset or i_switch(0),
             status_Busy           => o_led(0)
         );
 
