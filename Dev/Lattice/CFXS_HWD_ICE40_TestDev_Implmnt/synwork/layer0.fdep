@@ -15,8 +15,8 @@
 #CUR:"X:\\CFXS\\CFXS-HDL-Library\\VHDL\\Packages\\Utils.vhd":1665610678
 #CUR:"X:\\CFXS\\CFXS-HDL-Library\\VHDL\\Components\\PulseGenerator.vhd":1665694191
 #CUR:"X:\\CFXS\\CFXS-HDL-Library\\VHDL\\Components\\FixedDebounce.vhd":1665694807
-#CUR:"X:\\CFXS\\CFXS-HDL-Library\\VHDL\\Components\\Interfaces\\SWD.vhd":1665620582
-#CUR:"X:\\CFXS\\CFXS-HWD-Debug-Probe\\Dev\\HDL\\src\\main.vhd":1665766696
+#CUR:"X:\\CFXS\\CFXS-HDL-Library\\VHDL\\Components\\Interfaces\\SWD.vhd":1665780816
+#CUR:"X:\\CFXS\\CFXS-HWD-Debug-Probe\\Dev\\HDL\\src\\main.vhd":1665780000
 0 "X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd" vhdl
 1 "X:\CFXS\CFXS-HDL-Library\VHDL\Components\PulseGenerator.vhd" vhdl
 2 "X:\CFXS\CFXS-HDL-Library\VHDL\Components\FixedDebounce.vhd" vhdl
@@ -28,13 +28,13 @@
 0 2 1 3 5 
 1 5 
 2 5 
-3 5 
+3 1 5 
 4 -1
 5 -1
 
 # Dependency Lists (Users Of)
 0 -1
-1 0 
+1 0 3 
 2 0 
 3 0 
 4 -1

@@ -1,13 +1,13 @@
 C:\lscc\iCEcube2.2020.12\synpbase\bin64\m_generic.exe  -prodtype  synplify_pro   -encrypt  -pro  -rundir  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt   -part iCE40UP5K  -package UWG30    -maxfan 10000 -RWCheckOnRam 0 -pipe -fixgatedclocks 1 -fixgeneratedclocks 1 -summaryfile X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\report\CFXS_HWD_ICE40_TestDev_premap.xml  -top_level_module  main  -oedif  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.edf  -conchk_prepass  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev_cck.rpt   -autoconstraint  -freq 1.000   X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs  -flow prepass  -gcc_prepass  -osrd  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd  -qsap  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.sap  -devicelib  C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v  -ologparam  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\syntmp\CFXS_HWD_ICE40_TestDev.plg  -osyn  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd  -prjdir  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\  -prjname  CFXS_HWD_ICE40_TestDev_syn  -log  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_premap.srr 
-rc:1 success:1 runtime:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.edf|io:o|time:1665770839|size:150883|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev_cck.rpt|io:o|time:1665770963|size:3332|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs|io:i|time:1665770963|size:5655|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd|io:o|time:1665770963|size:16286|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.sap|io:o|time:1665770963|size:1703|exec:0
+rc:1 success:1 runtime:1
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.edf|io:o|time:1665780827|size:158941|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev_cck.rpt|io:o|time:1665780836|size:2992|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs|io:i|time:1665780835|size:5702|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd|io:o|time:1665780836|size:18518|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.sap|io:o|time:1665780836|size:1662|exec:0
 file:C:\lscc\iCEcube2.2020.12\synpbase\lib\generic\sb_ice40.v|io:i|time:1665752319|size:224837|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\syntmp\CFXS_HWD_ICE40_TestDev.plg|io:o|time:1665770963|size:0|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd|io:o|time:1665770963|size:16286|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_premap.srr|io:o|time:1665770963|size:5755|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\syntmp\CFXS_HWD_ICE40_TestDev.plg|io:o|time:1665780835|size:0|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_prem.srd|io:o|time:1665780836|size:18518|exec:0
+file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_premap.srr|io:o|time:1665780836|size:5510|exec:0
 file:C:\lscc\iCEcube2.2020.12\synpbase\bin\m_generic.exe|io:i|time:1665752317|size:17853440|exec:1
 file:C:\lscc\iCEcube2.2020.12\synpbase\bin64\m_generic.exe|io:i|time:1665752318|size:32355840|exec:1

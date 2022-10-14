@@ -8,10 +8,11 @@
 @N: MO231 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":58:8:58:9|Found counter in view:work.main(rtl) instance reg_SlowClockCounter[6:0] 
 @N: MO231 :"x:\cfxs\cfxs-hdl-library\vhdl\components\fixeddebounce.vhd":34:8:34:9|Found counter in view:cfxs.FixedDebounce(rtl) instance reg_StableCount_1[11:0] 
 @N: MO231 :"x:\cfxs\cfxs-hdl-library\vhdl\components\fixeddebounce.vhd":34:8:34:9|Found counter in view:cfxs.FixedDebounce(rtl) instance reg_StableCount_0[11:0] 
+@N: BN362 :"x:\cfxs\cfxs-hdl-library\vhdl\components\interfaces\swd.vhd":113:8:113:9|Removing sequential instance reg_SWD_State[1] (in view: cfxs.Interface_SWD(rtl)) because it does not drive other instances.
+@N: FX271 :"x:\cfxs\cfxs-hdl-library\vhdl\components\pulsegenerator.vhd":31:8:31:9|Replicating instance instance_SWD_Interface.instance_ProtocolClockPulse.reg_Counter[0] (in view: work.main(rtl)) with 14 loads 1 time to improve timing.
 @N: FX1016 :"x:\cfxs\cfxs-hwd-debug-probe\dev\hdl\src\main.vhd":17:8:17:19|SB_GB_IO inserted on the port system_clock.
-@N: FX1017 :|SB_GB inserted on the net N_52.
+@N: FX1017 :|SB_GB inserted on the net N_62.
 @N: MT611 :|Automatically generated clock main|slow_clock_derived_clock is not used and is being removed
-@N: MT611 :|Automatically generated clock Interface_SWD|clock_SWCLK_Divided_derived_clock is not used and is being removed
 @N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
 @N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
 @N: FX1056 |Writing EDF file: X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.edf

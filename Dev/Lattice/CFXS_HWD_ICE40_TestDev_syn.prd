@@ -1,0 +1,13 @@
+#--  Synopsys, Inc.
+#--  Version L-2016.09L+ice40
+#--  Project file X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_syn.prd
+#--  Written on Fri Oct 14 23:53:42 2022
+
+#
+### Watch Implementation type ###
+#
+watch_impl -all
+#
+### Watch Implementation properties ###
+#
+watch_prop -clear

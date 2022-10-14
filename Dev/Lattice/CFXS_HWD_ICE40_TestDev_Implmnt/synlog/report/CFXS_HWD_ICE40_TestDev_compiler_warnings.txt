@@ -1,6 +1,6 @@
 @W: CD638 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":45:11:45:27|Signal reg_swclk_divider is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":47:11:47:27|Signal reg_sendlinereset is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":48:11:48:32|Signal reg_sendswitchsequence is undriven. Either assign the signal a value or remove the signal declaration.
-@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":61:11:61:19|Signal dir_swdio is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":78:11:78:27|Signal reg_swd_nextstate is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CD638 :"X:\CFXS\CFXS-HDL-Library\VHDL\Components\Interfaces\SWD.vhd":80:11:80:30|Signal reg_swd_nextsubstate is undriven. Either assign the signal a value or remove the signal declaration.
+@W: CL246 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":18:8:18:15|Input port bits 3 to 1 of i_switch(3 downto 0) are unused. Assign logic for all port bits or change the input port size.
 @W: CL157 :"X:\CFXS\CFXS-HWD-Debug-Probe\Dev\HDL\src\main.vhd":20:8:20:12|Output o_led has undriven bits; assigning undriven bits to 0.  Simulation mismatch possible. Assign all bits of the output.
 

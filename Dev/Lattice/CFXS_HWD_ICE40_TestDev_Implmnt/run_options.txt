@@ -1,7 +1,7 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
 #--  Project file X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\run_options.txt
-#--  Written on Fri Oct 14 21:09:21 2022
+#--  Written on Fri Oct 14 23:53:54 2022
 
 
 #project files
