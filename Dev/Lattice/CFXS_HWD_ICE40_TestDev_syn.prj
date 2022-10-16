@@ -5,15 +5,27 @@
 
 
 #project files
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Types.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Utils.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/ClockDivider.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/FixedClockDivider.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/CascadeClockDivider.vhd
+add_file -vhdl -lib CFXS X:/CFXS/CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd
+add_file -vhdl -lib work X:/CFXS/CFXS-HWD-Debug-Probe/Dev/HDL/src/main.vhd
 
 
 
-add_file -vhdl -lib work "../HDL/src/main.vhd" 
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd" 
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" 
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" 
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Types.vhd" 
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Utils.vhd" 
+
+
+
+
+
+
+
+
+
 #implementation: "CFXS_HWD_ICE40_TestDev_Implmnt"
 impl -add CFXS_HWD_ICE40_TestDev_Implmnt -type fpga
 

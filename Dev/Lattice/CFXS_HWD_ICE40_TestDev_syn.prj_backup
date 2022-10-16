@@ -1,19 +1,19 @@
 #--  Synopsys, Inc.
 #--  Version L-2016.09L+ice40
-#--  Project file X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\run_options.txt
-#--  Written on Fri Oct 14 23:53:54 2022
+#--  Project file X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_syn.prj
+#--  Written on Fri Oct 14 16:14:38 2022
 
 
 #project files
-add_file -vhdl -lib work "../HDL/src/main.vhd"
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd"
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd"
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd"
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Types.vhd"
-add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Utils.vhd"
 
 
 
+add_file -vhdl -lib work "../HDL/src/main.vhd" 
+add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/PulseGenerator.vhd" 
+add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" 
+add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" 
+add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Types.vhd" 
+add_file -vhdl -lib CFXS "../../../CFXS-HDL-Library/VHDL/Packages/Utils.vhd" 
 #implementation: "CFXS_HWD_ICE40_TestDev_Implmnt"
 impl -add CFXS_HWD_ICE40_TestDev_Implmnt -type fpga
 
@@ -27,7 +27,7 @@ set_option -project_relative_includes 1
 set_option -technology SBTiCE40UP
 set_option -part iCE40UP5K
 set_option -package UWG30
-set_option -speed_grade ""
+set_option -speed_grade 
 set_option -part_companion ""
 
 #compilation/mapping options
@@ -75,4 +75,5 @@ set_option -write_apr_constraint 1
 
 #set result format/file last
 project -result_file "CFXS_HWD_ICE40_TestDev_Implmnt/CFXS_HWD_ICE40_TestDev.edf"
-impl -active "CFXS_HWD_ICE40_TestDev_Implmnt"
+impl -active CFXS_HWD_ICE40_TestDev_Implmnt
+project -run synthesis -clean

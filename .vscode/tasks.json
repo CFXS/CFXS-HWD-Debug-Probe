@@ -41,7 +41,7 @@
             },
             "group": "test",
             "problemMatcher": {
-                "owner": "VHDL",
+                "owner": "VHDL_Quartus",
                 "source": "Quartus",
                 "fileLocation": "absolute",
                 "pattern": {
@@ -71,7 +71,7 @@
             ],
             "dependsOrder": "sequence",
             "problemMatcher": {
-                "owner": "VHDL",
+                "owner": "VHDL_Quartus",
                 "source": "Quartus",
                 "fileLocation": "absolute",
                 "pattern": {
@@ -82,6 +82,43 @@
                     "message": 3,
                 },
             }
+        },
+        {
+            "label": "Lattice Compile",
+            "type": "shell",
+            "command": "${config:LATTICE_PATH}/synpwrap/synpwrap -prj CFXS_HWD_ICE40_TestDev_syn.prj -log \"CFXS_HWD_ICE40_TestDev_Implmnt/CFXS_HWD_ICE40_TestDev.srr\"",
+            "options": {
+                "cwd": "${workspaceRoot}/Dev/Lattice",
+                "env": {
+                    "SYNPLIFY_PATH": "C:/lscc/iCEcube2.2020.12/synpbase",
+                    "LM_LICENSE_FILE": "C:/Licenses/FlexLM/license.dat",
+                    "TCL_LIBRARY": "C:/lscc/iCEcube2.2020.12/sbt_backend/bin/win32/lib/tcl8.4",
+                    "ISPVM_PATH": "C:/lscc/iCEcube2.2020.12/sbt_backend/bin/win32/ispvmsystem",
+                    "FOUNDRY": "C:/lscc/iCEcube2.2020.12/LSE",
+                }
+            },
+            "group": "test",
+            "problemMatcher": {
+                "owner": "VHDL_Lattice",
+                "source": "Lattice",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "@(E):.+\"(.+)\":(\\d+):(\\d+):(\\d+):(\\d+)\\|(.+)",
+                    "severity": 1,
+                    "file": 2,
+                    "line": 3,
+                    "column": 4,
+                    "endLine": 5,
+                    "endColumn": 6,
+                    "message": 7,
+                },
+            }
+        },
+        {
+            "label": "Update Projects",
+            "type": "shell",
+            "command": "lua ${workspaceRoot}/Dev/HDL/VHDL_Project.lua ${workspaceRoot}/Dev",
+            "group": "test",
         }
     ]
 }

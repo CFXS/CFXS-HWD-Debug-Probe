@@ -1,7 +1,0 @@
-C:\lscc\iCEcube2.2020.12\synpbase\bin64\syn_nfilter.exe  -link  -top  main  -multisrs  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_comp.srs  -osyn  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs  -log  X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_multi_srs_gen.srr 
-rc:0 success:1 runtime:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_comp.srs|io:i|time:1665780834|size:13376|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs|io:o|time:1665780835|size:5702|exec:0
-file:X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_multi_srs_gen.srr|io:o|time:1665780835|size:549|exec:0
-file:C:\lscc\iCEcube2.2020.12\synpbase\bin\syn_nfilter.exe|io:i|time:1665752318|size:3128320|exec:1
-file:C:\lscc\iCEcube2.2020.12\synpbase\bin64\syn_nfilter.exe|io:i|time:1665752319|size:3947520|exec:1

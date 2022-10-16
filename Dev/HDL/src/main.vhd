@@ -14,7 +14,7 @@ use CFXS.Utils.MillisecondsToCycles;
 
 entity main is
     port (
-        system_clock : in std_logic;
+        clock_System : in std_logic;
         i_switch     : in std_logic_vector(3 downto 0);
         i_button     : in std_logic_vector(1 downto 0);
         o_led        : out std_logic_vector(7 downto 0);
@@ -35,7 +35,8 @@ end entity;
 
 architecture RTL of main is
     constant CLOCK_FREQUENCY       : natural := 50_000_000; -- 50MHz
-    constant SLOW_CLOCK_FREQUENCY  : natural := 50_000_000 / 128;
+    constant SLOW_CLOCK_CASCADE    : natural := 7;          -- /128
+    constant SLOW_CLOCK_FREQUENCY  : natural := 50_000_000 / (2 ** SLOW_CLOCK_CASCADE);
     constant SWCLK_FREQUENCY       : natural := 500_000;                                   -- SWCLK frequency
     constant SWCLK_DEFAULT_DIVIDER : natural := CLOCK_FREQUENCY / 2 / SWCLK_FREQUENCY - 1; -- Divider for SWCLK
 
@@ -50,16 +51,16 @@ architecture RTL of main is
     signal reg_Target_NRESET : std_logic;
 
     -- Slow clock
-    signal reg_SlowClockCounter : unsigned(6 downto 0) := (others => '0');
-    signal slow_clock           : std_logic            := '0';
+    signal clock_Slow : std_logic := '0';
 begin
-    process (system_clock)
-    begin
-        if rising_edge(system_clock) then
-            reg_SlowClockCounter <= reg_SlowClockCounter + 1;
-            slow_clock           <= reg_SlowClockCounter(6);
-        end if;
-    end process;
+    instance_SlowClockDivider : entity CFXS.CascadeClockDivider
+        generic map(
+            N => SLOW_CLOCK_CASCADE
+        )
+        port map(
+            clock     => clock_System,
+            clock_div => clock_slow
+        );
 
     instance_ButtonDebouncer : entity CFXS.FixedDebounce
         generic map(
@@ -67,7 +68,7 @@ begin
             N             => i_button'length
         )
         port map(
-            clock  => slow_clock,
+            clock  => clock_Slow,
             input  => not i_button,
             output => reg_ButtonState
         );
@@ -80,7 +81,7 @@ begin
             PULSE_LENGTH => SLOW_CLOCK_FREQUENCY / SWCLK_FREQUENCY + 1
         )
         port map(
-            clock   => slow_clock,
+            clock   => clock_Slow,
             trigger => reg_ButtonState(0),
             output  => reg_SWD_RequestLineReset
         );
@@ -93,7 +94,7 @@ begin
             PULSE_LENGTH => MillisecondsToCycles(20, SLOW_CLOCK_FREQUENCY)
         )
         port map(
-            clock   => slow_clock,
+            clock   => clock_Slow,
             trigger => reg_ButtonState(1),
             output  => reg_Target_NRESET
         );
@@ -110,7 +111,7 @@ begin
             USE_SWDIO_MIRROR => true
         )
         port map(
-            clock                 => system_clock,
+            clock                 => clock_System,
             cfg_SWCLK_Divider     => reg_SWCLK_Divider,
             target_swclk          => reg_target_swclk,
             target_swdio          => target_swdio,
