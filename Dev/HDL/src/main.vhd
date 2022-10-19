@@ -131,16 +131,13 @@ begin
             mirror_target_swdio        => dbg_target_swdio,
             request_SendLineReset      => '0',
             request_SendSwitchSequence => reg_SWD_RequestSwitchSequence,
-            request_ReadData           => not i_button(0),
-            -- request_ReadData           => reg_SWD_RequestReadData,
-            status_Busy         => o_led(0),
-            status_ParityError  => o_led(1),
-            status_TransferDone => o_led(2),
-            swd_DataOut         => reg_SWD_DataOut,
+            request_ReadData           => reg_SWD_RequestReadData,
+            status_Busy                => o_led(0),
+            status_ParityError         => o_led(1),
+            status_TransferDone        => o_led(2),
+            swd_DataOut                => reg_SWD_DataOut,
 
-            swd_APnDP   => '0', -- DP
-            swd_RnW     => '1', -- Read
-            swd_Address => "00" -- IDCODE
+            swd_Header => "10100101" -- Read DP IDCODE
         );
 
     -- Multiple outputs for SWCLK
