@@ -35,23 +35,35 @@
         {
             "label": "Quartus Compile",
             "type": "shell",
-            "command": "${config:QUARTUS_PATH}/quartus_sh --flow compile CFXS_HWD_TestDev",
+            "command": "${config:QUARTUS_PATH}/quartus_sh --flow compile CFXS_HWD_TestDev; cat ./output_files/CFXS_HWD_TestDev.fit.summary",
             "options": {
                 "cwd": "${workspaceRoot}/Dev/Quartus"
             },
             "group": "test",
-            "problemMatcher": {
-                "owner": "VHDL_Quartus",
-                "source": "Quartus",
-                "fileLocation": "absolute",
-                "pattern": {
-                    "regexp": "^(Error) \\((\\d+)\\):.+\\):? (.+)File: (.+) Line: (\\d+)",
-                    "file": 4,
-                    "line": 5,
-                    "severity": 1,
-                    "message": 3,
+            "problemMatcher": [
+                {
+                    "owner": "VHDL_Quartus",
+                    "source": "Quartus",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^(Error) \\((\\d+)\\):.+\\):? (.+)File: (.+) Line: (\\d+)",
+                        "file": 4,
+                        "line": 5,
+                        "severity": 1,
+                        "message": 3,
+                    },
                 },
-            }
+                {
+                    "owner": "VHDL_QuartusInfo",
+                    "source": "QuartusInfo",
+                    "severity": "info",
+                    "pattern": {
+                        "regexp": "^(Logic utilization \\(in ALMs\\) : \\d+ \\/ [\\d,]+ \\(.+\\))$",
+                        "message": 1,
+                        "file": 1
+                    },
+                },
+            ]
         },
         {
             "label": "Quartus Program",

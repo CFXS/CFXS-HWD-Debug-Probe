@@ -2,12 +2,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 library CFXS;
-use CFXS.Utils.RequiredBits;
-use CFXS.Utils.MillisecondsToCycles;
+use CFXS.Utils.all;
 
 -------------------------------
 -- [SWD Pins]
--- yellow SWDIO GPIO_1.0  PIN_Y15 => PIN_AC24
+-- yellow SWDIO GPIO_1.0  PIN_Y15  => PIN_AC24
 -- green SWCLK GPIO_1.2   PIN_AA15 => PIN_AD26
 -- blue SWO GPIO_1.4      PIN_AG28 => PIN_AF28
 -- white RESET GPIO_1.6   PIN_AE25 => PIN_AF27
@@ -43,9 +42,12 @@ architecture RTL of main is
     signal reg_ButtonState : std_logic_vector(i_button'length - 1 downto 0) := (others => '0');
 
     -- SWD/SWO registers
-    signal reg_SWCLK_Divider        : unsigned(RequiredBits(SWCLK_DEFAULT_DIVIDER) - 1 downto 0) := to_unsigned(SWCLK_DEFAULT_DIVIDER, RequiredBits(SWCLK_DEFAULT_DIVIDER));
-    signal reg_target_swclk         : std_logic;
-    signal reg_SWD_RequestLineReset : std_logic := '0';
+    signal reg_SWCLK_Divider             : unsigned(HighBit(SWCLK_DEFAULT_DIVIDER) downto 0) := to_unsigned(SWCLK_DEFAULT_DIVIDER, RequiredBits(SWCLK_DEFAULT_DIVIDER));
+    signal reg_target_swclk              : std_logic;
+    signal reg_SWD_RequestLineReset      : std_logic := '0';
+    signal reg_SWD_RequestReadData       : std_logic := '0';
+    signal reg_SWD_RequestSwitchSequence : std_logic := '0';
+    signal reg_SWD_DataOut               : std_logic_vector(31 downto 0);
 
     -- Target reset
     signal reg_Target_NRESET : std_logic;
@@ -75,7 +77,7 @@ begin
 
     o_led(7 downto 6) <= reg_ButtonState;
 
-    instance_TestPulse : entity CFXS.PulseGenerator
+    instance_TestPulse1 : entity CFXS.PulseGenerator
         generic map(
             IDLE_OUTPUT  => '0',
             PULSE_LENGTH => SLOW_CLOCK_FREQUENCY / SWCLK_FREQUENCY + 1
@@ -83,7 +85,18 @@ begin
         port map(
             clock   => clock_Slow,
             trigger => reg_ButtonState(0),
-            output  => reg_SWD_RequestLineReset
+            output  => reg_SWD_RequestReadData
+        );
+
+    instance_TestPulse2 : entity CFXS.PulseGenerator
+        generic map(
+            IDLE_OUTPUT  => '0',
+            PULSE_LENGTH => SLOW_CLOCK_FREQUENCY / SWCLK_FREQUENCY + 1
+        )
+        port map(
+            clock   => clock_Slow,
+            trigger => reg_ButtonState(1),
+            output  => reg_SWD_RequestSwitchSequence
         );
 
     ----------------------------------------------------
@@ -95,13 +108,13 @@ begin
         )
         port map(
             clock   => clock_Slow,
-            trigger => reg_ButtonState(1),
+            trigger => i_switch(3),
             output  => reg_Target_NRESET
         );
 
     target_nreset     <= reg_Target_NRESET;
     dbg_target_nreset <= reg_Target_NRESET;
-    o_led(1)          <= not reg_Target_NRESET;
+    o_led(5)          <= not reg_Target_NRESET;
 
     ----------------------------------------------------
     -- SWD/SWO
@@ -111,13 +124,23 @@ begin
             USE_SWDIO_MIRROR => true
         )
         port map(
-            clock                 => clock_System,
-            cfg_SWCLK_Divider     => reg_SWCLK_Divider,
-            target_swclk          => reg_target_swclk,
-            target_swdio          => target_swdio,
-            mirror_target_swdio   => dbg_target_swdio,
-            request_SendLineReset => reg_SWD_RequestLineReset or i_switch(0),
-            status_Busy           => o_led(0)
+            clock                      => clock_System,
+            cfg_SWCLK_Divider          => reg_SWCLK_Divider,
+            target_swclk               => reg_target_swclk,
+            target_swdio               => target_swdio,
+            mirror_target_swdio        => dbg_target_swdio,
+            request_SendLineReset      => '0',
+            request_SendSwitchSequence => reg_SWD_RequestSwitchSequence,
+            request_ReadData           => not i_button(0),
+            -- request_ReadData           => reg_SWD_RequestReadData,
+            status_Busy         => o_led(0),
+            status_ParityError  => o_led(1),
+            status_TransferDone => o_led(2),
+            swd_DataOut         => reg_SWD_DataOut,
+
+            swd_APnDP   => '0', -- DP
+            swd_RnW     => '1', -- Read
+            swd_Address => "00" -- IDCODE
         );
 
     -- Multiple outputs for SWCLK
