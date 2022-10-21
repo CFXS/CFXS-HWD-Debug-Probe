@@ -4,7 +4,7 @@ Running in Lattice mode
 Starting:    C:\lscc\iCEcube2.2020.12\synpbase\bin64\mbin\synbatch.exe
 Install:     C:\lscc\iCEcube2.2020.12\synpbase
 Hostname:    DESKTOP-0ATB960
-Date:        Wed Oct 19 23:41:47 2022
+Date:        Fri Oct 21 22:32:03 2022
 Version:     L-2016.09L+ice40
 
 Arguments:   -product synplify_pro -batch CFXS_HWD_ICE40_TestDev_syn.prj
@@ -21,59 +21,27 @@ Running: CFXS_HWD_ICE40_TestDev_Implmnt in foreground
 Running CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
 
 Running: compile (Compile) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:47 2022
+# Fri Oct 21 22:32:04 2022
 
 Running: compile_flow (Compile Process) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:47 2022
+# Fri Oct 21 22:32:04 2022
 
 Running: compiler (Compile Input) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:47 2022
-Copied X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_comp.srs to X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.srs
+# Fri Oct 21 22:32:04 2022
+compiler exited with errors
+Job failed on: CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
 
-compiler completed
-# Wed Oct 19 23:41:48 2022
+Job: "compiler" terminated with error status: 2
+See log file: "X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synlog\CFXS_HWD_ICE40_TestDev_compiler.srr"
+# Fri Oct 21 22:32:04 2022
 
-Return Code: 0
-Run Time:00h:00m:01s
-
-Running: multi_srs_gen (Multi-srs Generator) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:48 2022
-
-multi_srs_gen completed
-# Wed Oct 19 23:41:48 2022
-
-Return Code: 0
+Return Code: 2
 Run Time:00h:00m:00s
-Copied X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_mult.srs to X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.srs
 Complete: Compile Process on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-
-Running: premap (Pre-mapping) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:48 2022
-
-premap completed with warnings
-# Wed Oct 19 23:41:48 2022
-
-Return Code: 1
-Run Time:00h:00m:00s
 Complete: Compile on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-
-Running: map (Map) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:48 2022
-License granted for 4 parallel jobs
-
-Running: fpga_mapper (Map & Optimize) on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
-# Wed Oct 19 23:41:48 2022
-Copied X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\synwork\CFXS_HWD_ICE40_TestDev_m.srm to X:\CFXS\CFXS-HWD-Debug-Probe\Dev\Lattice\CFXS_HWD_ICE40_TestDev_Implmnt\CFXS_HWD_ICE40_TestDev.srm
-
-fpga_mapper completed with warnings
-# Wed Oct 19 23:41:50 2022
-
-Return Code: 1
-Run Time:00h:00m:02s
-Complete: Map on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
 Complete: Logic Synthesis on CFXS_HWD_ICE40_TestDev_syn|CFXS_HWD_ICE40_TestDev_Implmnt
 
-exit status=0
+exit status=2
 
-exit status=0
+exit status=2
 

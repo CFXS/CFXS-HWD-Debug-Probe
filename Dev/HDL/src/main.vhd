@@ -36,7 +36,7 @@ architecture RTL of main is
     constant CLOCK_FREQUENCY       : natural := 50_000_000; -- 50MHz
     constant SLOW_CLOCK_CASCADE    : natural := 7;          -- /128
     constant SLOW_CLOCK_FREQUENCY  : natural := 50_000_000 / (2 ** SLOW_CLOCK_CASCADE);
-    constant SWCLK_FREQUENCY       : natural := 500_000;                                   -- SWCLK frequency
+    constant SWCLK_FREQUENCY       : natural := 12_500_000;                                -- SWCLK frequency
     constant SWCLK_DEFAULT_DIVIDER : natural := CLOCK_FREQUENCY / 2 / SWCLK_FREQUENCY - 1; -- Divider for SWCLK
 
     signal reg_ButtonState : std_logic_vector(i_button'length - 1 downto 0) := (others => '0');
