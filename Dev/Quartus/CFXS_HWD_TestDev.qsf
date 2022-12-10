@@ -129,7 +129,6 @@ set_instance_assignment -name CURRENT_STRENGTH_NEW 8MA -to dbg_target_swdio
 
 
 
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Types.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Packages/Utils.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/FixedDebounce.vhd" -library CFXS
@@ -139,3 +138,5 @@ set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/CascadeClockDivider.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HDL-Library/VHDL/Components/Interfaces/SWD.vhd" -library CFXS
 set_global_assignment -name VHDL_FILE "X:/CFXS/CFXS-HWD-Debug-Probe/Dev/HDL/src/main.vhd"
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

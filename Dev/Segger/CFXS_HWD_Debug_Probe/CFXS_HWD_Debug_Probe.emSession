@@ -82,5 +82,5 @@
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="154" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../build/_deps/lib_cfxs_platform-src/private/Startup/TM4C129X.cpp" selected="0" top="136" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="104" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../build/_deps/lib_cfxs_platform-src/src/Task.cpp" selected="0" top="70" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="CFXS_HWD_Debug_Probe" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
+ <ARMCrossStudioWindow activeProject="CFXS_HWD_Debug_Probe" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
